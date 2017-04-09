@@ -1,4 +1,4 @@
-extern crate curl;
+extern crate curlers;
 
 use std::str;
 use std::time::Duration;
@@ -10,7 +10,7 @@ macro_rules! t {
     })
 }
 
-use curl::easy::{Easy, Form};
+use curlers::easy::{Easy, Form};
 
 use server::Server;
 mod server;

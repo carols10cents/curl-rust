@@ -18,7 +18,7 @@
 //! ```rust,no_run
 //! use std::io::{stdout, Write};
 //!
-//! use curl::easy::Easy;
+//! use curlers::easy::Easy;
 //!
 //! // Write the contents of rust-lang.org to stdout
 //! let mut easy = Easy::new();

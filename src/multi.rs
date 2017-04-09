@@ -428,7 +428,7 @@ impl Multi {
     /// # Example
     ///
     /// ```
-    /// use curl::multi::Multi;
+    /// use curlers::multi::Multi;
     /// use std::time::Duration;
     ///
     /// let m = Multi::new();

@@ -1,19 +1,10 @@
 [package]
 
-name = "curl"
-version = "0.4.6"
-authors = ["Carl Lerche <me@carllerche.com>",
-           "Alex Crichton <alex@alexcrichton.com>"]
+name = "curlers"
+version = "0.1.0"
+authors = ["Carol (Nichols || Goulding), carol.nichols@gmail.com"]
 license = "MIT"
-repository = "https://github.com/alexcrichton/curl-rust"
-homepage = "https://github.com/alexcrichton/curl-rust"
-documentation = "https://docs.rs/curl"
-description = "Rust bindings to libcurl for making HTTP requests"
-categories = ["api-bindings", "web-programming::http-client"]
-
-[badges]
-travis-ci = { repository = "alexcrichton/curl-rust" }
-appveyor = { repository = "alexcrichton/curl-rust" }
+description = "Rust implementation of libcurl for making HTTP requests"
 
 [dependencies]
 libc = "0.2"

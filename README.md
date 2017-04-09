@@ -1,20 +1,15 @@
-# curl-rust
+# curlers
 
-libcurl bindings for Rust
-
-[![Build Status](https://travis-ci.org/alexcrichton/curl-rust.svg?branch=master)](https://travis-ci.org/alexcrichton/curl-rust)
-[![Build status](https://ci.appveyor.com/api/projects/status/lx98wtbxhhhajpr9?svg=true)](https://ci.appveyor.com/project/alexcrichton/curl-rust)
-
-[Documentation](https://docs.rs/curl)
+libcurl reimplemented in Rust
 
 ## Quick Start
 
 ```rust
-extern crate curl;
+extern crate curlers;
 
 use std::io::{stdout, Write};
 
-use curl::easy::Easy;
+use curlers::easy::Easy;
 
 // Print a web page onto stdout
 fn main() {
@@ -30,9 +25,9 @@ fn main() {
 ```
 
 ```rust
-extern crate curl;
+extern crate curlers;
 
-use curl::easy::Easy;
+use curlers::easy::Easy;
 
 // Capture output into a local `Vec`.
 fn main() {
@@ -56,10 +51,10 @@ request, and then `read_function` can be used to specify how data is filled in.
 This interface works particularly well with types that implement `Read`.
 
 ```rust,no_run
-extern crate curl;
+extern crate curlers;
 
 use std::io::Read;
-use curl::easy::Easy;
+use curlers::easy::Easy;
 
 fn main() {
     let mut data = "this is the body".as_bytes();
@@ -82,9 +77,9 @@ fn main() {
 Custom headers can be specified as part of the request:
 
 ```rust,no_run
-extern crate curl;
+extern crate curlers;
 
-use curl::easy::{Easy, List};
+use curlers::easy::{Easy, List};
 
 fn main() {
     let mut easy = Easy::new();
@@ -103,9 +98,9 @@ The handle can be re-used across multiple requests. Curl will attempt to
 keep the connections alive.
 
 ```rust,no_run
-extern crate curl;
+extern crate curlers;
 
-use curl::easy::Easy;
+use curlers::easy::Easy;
 
 fn main() {
     let mut handle = Easy::new();

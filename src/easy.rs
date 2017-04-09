@@ -48,7 +48,7 @@ use panic;
 /// Creating a handle which can be used later
 ///
 /// ```
-/// use curl::easy::Easy;
+/// use curlers::easy::Easy;
 ///
 /// let handle = Easy::new();
 /// ```
@@ -58,7 +58,7 @@ use panic;
 /// ```
 /// use std::io::{stdout, Write};
 ///
-/// use curl::easy::Easy;
+/// use curlers::easy::Easy;
 ///
 /// let mut handle = Easy::new();
 /// handle.url("https://www.rust-lang.org/").unwrap();
@@ -71,7 +71,7 @@ use panic;
 /// Collect all output of an HTTP request to a vector.
 ///
 /// ```
-/// use curl::easy::Easy;
+/// use curlers::easy::Easy;
 ///
 /// let mut data = Vec::new();
 /// let mut handle = Easy::new();
@@ -515,7 +515,7 @@ impl Easy {
     ///
     /// ```
     /// use std::io::{stdout, Write};
-    /// use curl::easy::Easy;
+    /// use curlers::easy::Easy;
     ///
     /// let mut handle = Easy::new();
     /// handle.url("https://www.rust-lang.org/").unwrap();
@@ -529,7 +529,7 @@ impl Easy {
     ///
     /// ```
     /// use std::io::{stdout, Write};
-    /// use curl::easy::Easy;
+    /// use curlers::easy::Easy;
     ///
     /// let mut buf = Vec::new();
     /// let mut handle = Easy::new();
@@ -597,7 +597,7 @@ impl Easy {
     ///
     /// ```no_run
     /// use std::io::{stdin, Read};
-    /// use curl::easy::Easy;
+    /// use curlers::easy::Easy;
     ///
     /// let mut handle = Easy::new();
     /// handle.url("https://example.com/login").unwrap();
@@ -612,7 +612,7 @@ impl Easy {
     ///
     /// ```no_run
     /// use std::io::{stdin, Read};
-    /// use curl::easy::Easy;
+    /// use curlers::easy::Easy;
     ///
     /// let mut data_to_upload = &b"foobar"[..];
     /// let mut handle = Easy::new();
@@ -863,7 +863,7 @@ impl Easy {
     /// ```
     /// use std::str;
     ///
-    /// use curl::easy::Easy;
+    /// use curlers::easy::Easy;
     ///
     /// let mut handle = Easy::new();
     /// handle.url("https://www.rust-lang.org/").unwrap();
@@ -879,7 +879,7 @@ impl Easy {
     /// ```
     /// use std::str;
     ///
-    /// use curl::easy::Easy;
+    /// use curlers::easy::Easy;
     ///
     /// let mut headers = Vec::new();
     /// let mut handle = Easy::new();
@@ -1366,7 +1366,7 @@ impl Easy {
     /// # Examples
     ///
     /// ```
-    /// use curl::easy::{Easy, List};
+    /// use curlers::easy::{Easy, List};
     ///
     /// let mut list = List::new();
     /// list.append("Foo: bar").unwrap();

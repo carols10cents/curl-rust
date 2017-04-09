@@ -1,14 +1,14 @@
 #![cfg(unix)]
 
-extern crate curl;
+extern crate curlers;
 extern crate mio;
 
 use std::collections::HashMap;
 use std::io::{Read, Cursor};
 use std::time::Duration;
 
-use curl::easy::{Easy, List};
-use curl::multi::Multi;
+use curlers::easy::{Easy, List};
+use curlers::multi::Multi;
 
 macro_rules! t {
     ($e:expr) => (match $e {
@@ -81,7 +81,7 @@ Accept: */*\r\n\
 
 #[test]
 fn upload_lots() {
-    use curl::multi::{Socket, SocketEvents, Events};
+    use curlers::multi::{Socket, SocketEvents, Events};
 
     #[derive(Debug)]
     enum Message {
@@ -230,7 +230,7 @@ HTTP/1.1 200 OK\r\n\
 fn waitfds() {
     use std::fs::File;
     use std::os::unix::io::AsRawFd;
-    use curl::multi::WaitFd;
+    use curlers::multi::WaitFd;
 
     let filenames = ["/dev/null", "/dev/zero", "/dev/urandom"];
     let files: Vec<File> = filenames.iter()

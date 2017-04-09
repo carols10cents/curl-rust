@@ -1,4 +1,4 @@
-extern crate curl;
+extern crate curlers;
 
 use std::cell::{RefCell, Cell};
 use std::io::Read;
@@ -13,7 +13,7 @@ macro_rules! t {
     })
 }
 
-use curl::easy::{Easy, List, WriteError, ReadError, Transfer};
+use curlers::easy::{Easy, List, WriteError, ReadError, Transfer};
 
 use server::Server;
 mod server;
